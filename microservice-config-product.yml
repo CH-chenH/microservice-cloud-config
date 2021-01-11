@@ -1,39 +1,39 @@
 spring:
   profiles:
-    active: dev      #¼¤»î¿ª·¢»·¾³ÅäÖÃ
+    active: dev      #æ¿€æ´»å¼€å‘ç¯å¢ƒé…ç½®
 ---
 server:
   port: 8001
 
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml            # mybatisÅäÖÃÎÄ¼şËùÔÚµÄÂ·¾¶
-  type-aliases-package: com.mengxuegu.springcloud.entities      # ËùÓĞentity±ğÃûÀàËùÔÚ°ü
-  mapper-locations: classpath:mybatis/mapper/**/*.xml           # mapperÓ³ÉäÎÄ¼ş
+  config-location: classpath:mybatis/mybatis.cfg.xml            # mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨çš„è·¯å¾„
+  type-aliases-package: com.mengxuegu.springcloud.entities      # æ‰€æœ‰entityåˆ«åç±»æ‰€åœ¨åŒ…
+  mapper-locations: classpath:mybatis/mapper/**/*.xml           # mapperæ˜ å°„æ–‡ä»¶
 
 spring:
   profiles: dev
   application:
-    name: microservice-product-config                                  #ÖØÒª£¬·şÎñÓë·şÎñÖ®¼äµÄµ÷ÓÃ
+    name: microservice-product-config                                  #é‡è¦ï¼ŒæœåŠ¡ä¸æœåŠ¡ä¹‹é—´çš„è°ƒç”¨
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource                #µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: com.mysql.cj.jdbc.Driver                 #mysqlÇı¶¯°ü
-    url: jdbc:mysql://127.0.0.1:3306/springcloud_db01?serverTimezone=GMT%2B8   #Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource                #å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: com.mysql.cj.jdbc.Driver                 #mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://127.0.0.1:3306/springcloud_db01?serverTimezone=GMT%2B8   #æ•°æ®åº“åç§°
     username: root
     password: root
     dbcp2:
-      min-idle: 5                                               #Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5                                           #³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5                                              #×î´óÁ¬½ÓÊı
-      max-wait-millis: 150                                      #µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5                                               #æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5                                           #åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5                                              #æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 150                                      #ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 
 eureka:
   client:
-    register-with-eureka: true    #·şÎñ×¢²á¿ª¹Ø
-    fetch-registry: true          #·şÎñ·¢ÏÖ¿ª¹Ø
-    service-url:                  #×¢²áµ½ÄÄÒ»¸öEureka Server·şÎñ×¢²áÖĞĞÄ£¬¶à¸öÖĞ¼äÓÃ¶ººÅ·Ö¸ô
+    register-with-eureka: true    #æœåŠ¡æ³¨å†Œå¼€å…³
+    fetch-registry: true          #æœåŠ¡å‘ç°å¼€å…³
+    service-url:                  #æ³¨å†Œåˆ°å“ªä¸€ä¸ªEureka ServeræœåŠ¡æ³¨å†Œä¸­å¿ƒï¼Œå¤šä¸ªä¸­é—´ç”¨é€—å·åˆ†éš”
       defaultZone: http://eureka6001.com:6001/eureka
   instance:
-    instance-id: ${spring.application.name}:${server.port}     #Ö¸¶¨ÊµÀıID£¬¾Í²»»áÏÔÊ¾Ö÷»úÃûÁË
+    instance-id: ${spring.application.name}:${server.port}     #æŒ‡å®šå®ä¾‹IDï¼Œå°±ä¸ä¼šæ˜¾ç¤ºä¸»æœºåäº†
     prefer-ip-address: true        
     
 ---
@@ -41,32 +41,32 @@ server:
   port: 8001
 
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml            # mybatisÅäÖÃÎÄ¼şËùÔÚµÄÂ·¾¶
-  type-aliases-package: com.mengxuegu.springcloud.entities      # ËùÓĞentity±ğÃûÀàËùÔÚ°ü
-  mapper-locations: classpath:mybatis/mapper/**/*.xml           # mapperÓ³ÉäÎÄ¼ş
+  config-location: classpath:mybatis/mybatis.cfg.xml            # mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨çš„è·¯å¾„
+  type-aliases-package: com.mengxuegu.springcloud.entities      # æ‰€æœ‰entityåˆ«åç±»æ‰€åœ¨åŒ…
+  mapper-locations: classpath:mybatis/mapper/**/*.xml           # mapperæ˜ å°„æ–‡ä»¶
 
 spring:
   profiles: prod
   application:
-    name: microservice-product-config                                  #ÖØÒª£¬·şÎñÓë·şÎñÖ®¼äµÄµ÷ÓÃ
+    name: microservice-product-config                                  #é‡è¦ï¼ŒæœåŠ¡ä¸æœåŠ¡ä¹‹é—´çš„è°ƒç”¨
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource                #µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: com.mysql.cj.jdbc.Driver                 #mysqlÇı¶¯°ü
-    url: jdbc:mysql://127.0.0.1:3306/springcloud_db02?serverTimezone=GMT%2B8   #Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource                #å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: com.mysql.cj.jdbc.Driver                 #mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://127.0.0.1:3306/springcloud_db02?serverTimezone=GMT%2B8   #æ•°æ®åº“åç§°
     username: root
     password: root
     dbcp2:
-      min-idle: 5                                               #Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5                                           #³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5                                              #×î´óÁ¬½ÓÊı
-      max-wait-millis: 150                                      #µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5                                               #æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5                                           #åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5                                              #æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 150                                      #ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 
 eureka:
   client:
-    register-with-eureka: true    #·şÎñ×¢²á¿ª¹Ø
-    fetch-registry: true          #·şÎñ·¢ÏÖ¿ª¹Ø
-    service-url:                  #×¢²áµ½ÄÄÒ»¸öEureka Server·şÎñ×¢²áÖĞĞÄ£¬¶à¸öÖĞ¼äÓÃ¶ººÅ·Ö¸ô
+    register-with-eureka: true    #æœåŠ¡æ³¨å†Œå¼€å…³
+    fetch-registry: true          #æœåŠ¡å‘ç°å¼€å…³
+    service-url:                  #æ³¨å†Œåˆ°å“ªä¸€ä¸ªEureka ServeræœåŠ¡æ³¨å†Œä¸­å¿ƒï¼Œå¤šä¸ªä¸­é—´ç”¨é€—å·åˆ†éš”
       defaultZone: http://eureka6001.com:6001/eureka
   instance:
-    instance-id: ${spring.application.name}:${server.port}     #Ö¸¶¨ÊµÀıID£¬¾Í²»»áÏÔÊ¾Ö÷»úÃûÁË
+    instance-id: ${spring.application.name}:${server.port}     #æŒ‡å®šå®ä¾‹IDï¼Œå°±ä¸ä¼šæ˜¾ç¤ºä¸»æœºåäº†
     prefer-ip-address: true   

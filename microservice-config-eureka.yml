@@ -1,12 +1,12 @@
-#×¢Òâ£ºÈç¹ûÔÚ¼ÇÊÂ±¾ÉÏ±àĞ´£¬ÏÂÃæµÄËõ½ø²»ÒªÊ¹ÓÃTabÀ´Ëõ½ø£¬²»È»»á±¨´í
+#æ³¨æ„ï¼šå¦‚æœåœ¨è®°äº‹æœ¬ä¸Šç¼–å†™ï¼Œä¸‹é¢çš„ç¼©è¿›ä¸è¦ä½¿ç”¨Tabæ¥ç¼©è¿›ï¼Œä¸ç„¶ä¼šæŠ¥é”™
 spring:
   profiles:
-    active: dev      #¼¤»î¿ª·¢»·¾³
+    active: dev      #æ¿€æ´»å¼€å‘ç¯å¢ƒ
 ---
 server:
-  port: 6001 #¶Ë¿ÚºÅ
+  port: 6001 #ç«¯å£å·
 spring:
-  profiles: dev    #¿ª·¢»·¾³
+  profiles: dev    #å¼€å‘ç¯å¢ƒ
   application:
     name: microservice-config-eureka
 eureka:
@@ -18,12 +18,12 @@ eureka:
     serviceUrl:
       defaultZone: http://eureka6001.com:6001/eureka/
   server:
-    enable-self-preservation: false       #½ûÓÃ×ÔÎÒ±£»¤»úÖÆ
+    enable-self-preservation: false       #ç¦ç”¨è‡ªæˆ‘ä¿æŠ¤æœºåˆ¶
 ---
 server:
-  port: 6001 #¶Ë¿ÚºÅ
+  port: 6001 #ç«¯å£å·
 spring:
-  profiles: prod    #¿ª·¢»·¾³
+  profiles: prod    #å¼€å‘ç¯å¢ƒ
   application:
     name: microservice-config-eureka
 eureka:
@@ -35,4 +35,4 @@ eureka:
     serviceUrl:
       defaultZone: http://eureka6001.com:6001/eureka/
   server:
-    enable-self-preservation: true       #½ûÓÃ×ÔÎÒ±£»¤»úÖÆ
+    enable-self-preservation: true       #ç¦ç”¨è‡ªæˆ‘ä¿æŠ¤æœºåˆ¶
